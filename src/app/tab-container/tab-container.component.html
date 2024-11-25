@@ -1,0 +1,18 @@
+<div class="tab-container">
+  <div class="tab-header">
+    <div *ngFor="let tab of tabs" 
+         class="tab" 
+         [class.active]="tab.active"
+         (click)="setActiveTab.emit(tab.id)">
+      {{ tab.name }}
+      <button (click)="onCloseTab(tab.id, $event)">×</button>
+    </div>
+  </div>
+  <div class="tab-content">
+    <app-table *ngFor="let tab of tabs" 
+               [tableName]="tab.name" 
+               [active]="tab.name === activeTabName">
+    </app-table>
+  </div>
+</div>
+

@@ -1,0 +1,26 @@
+.sidebar {
+  width: 200px;
+  background-color: #f0f0f0;
+  padding: 20px;
+  height: 100%;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  cursor: pointer;
+  padding: 5px 0;
+}
+
+li:hover {
+  text-decoration: underline;
+}
+
+li.active {
+  font-weight: bold;
+  color: #007bff;
+}
+
